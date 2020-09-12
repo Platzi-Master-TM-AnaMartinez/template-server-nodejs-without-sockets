@@ -4,7 +4,7 @@
   "description": "A template for create a new API/REST project in NodeJs with TypeScript. This template doesn't have websockets",
   "main": "./src/index.js",
   "scripts": {
-    "start": "cross-env ENV_FILE_PATH='../../.env.prod' node dist",
+    "start": "cross-env ENV_FILE_PATH='../../.env.prod' npm run build && node dist",
     "start:dev": "cross-env ENV_FILE_PATH='../../.env' nodemon dist",
     "build": "tsc",
     "watch": "tsc -w",
