@@ -14,11 +14,10 @@ import config from '../config';
 import database from '../database';
 
 // Routing
-import routing from '../network/routes.network';
+import routes from '../network/routes.network';
 
 // Error handler
 import errorHandler from '../network/error-handler.network';
-import routes from '../network/routes.network';
 
 /**
  * Singleton class for a new HTTP Server
