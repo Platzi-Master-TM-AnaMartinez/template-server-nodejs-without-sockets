@@ -52,8 +52,7 @@ export default class Server {
   }
 
   private setDatabase() {
-    // TODO: Set database config
-
+    database.connect(this.app);
   }
 
   private setEncoded() {
