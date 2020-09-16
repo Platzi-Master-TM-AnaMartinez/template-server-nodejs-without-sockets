@@ -8,9 +8,9 @@
     "start:dev": "cross-env ENV_FILE_PATH='../../.env' nodemon dist",
     "build": "tsc",
     "watch": "tsc -w",
-    "test": "jest",
-    "test:coverage": "jest --coverage",
-    "test:cache": "jest --clearCache"
+    "test": "cross-env ENV_FILE_PATH='../../.env' jest",
+    "test:coverage": "cross-env ENV_FILE_PATH='../../.env' jest --coverage",
+    "test:cache": "cross-env ENV_FILE_PATH='../../.env' jest --clearCache"
   },
   "repository": {
     "type": "git",
