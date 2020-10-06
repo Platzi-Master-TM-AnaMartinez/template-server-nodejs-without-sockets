@@ -6,11 +6,7 @@ import config from '../config';
 
 import { MongoError } from 'mongodb';
 
-const mongoUrl: string = `${config.mongo.url}/${config.mongo.collection}`;
 const mongoOptions: mongoose.ConnectionOptions = {
-  user: config.mongo.user,
-  pass: config.mongo.pass,
-  authSource: 'admin',
   useUnifiedTopology: true,
   useNewUrlParser: true,
   useCreateIndex: true,
@@ -18,7 +14,7 @@ const mongoOptions: mongoose.ConnectionOptions = {
 };
 
 const connect = (app: express.Application) => {
-  mongoose.connect(mongoUrl, mongoOptions)
+  mongoose.connect(config.mongo.uri, mongoOptions)
     .then(() => {
       setSanitizer(app);
       console.log('Base de datos online');

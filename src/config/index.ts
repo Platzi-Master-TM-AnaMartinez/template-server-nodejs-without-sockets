@@ -11,10 +11,7 @@ dotnet.config({ path: envPath });
 const config = {
   port: Number(process.env.PORT) || 4000,
   mongo: {
-    url: process.env.MONGO_URL || '',
-    collection: process.env.MONGO_COLLECTION || '',
-    user: process.env.MONGO_USER || '',
-    pass: process.env.MONGO_PASS || ''
+    uri: process.env.MONGO_URI || ''
   },
 }
 
